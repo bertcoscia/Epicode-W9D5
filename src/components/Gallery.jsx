@@ -32,11 +32,20 @@ class Gallery extends Component {
     this.fetchMovies(this.props.query);
   }
 
+  capitalizeTitle(title) {
+    return title
+      .split(" ")
+      .map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      })
+      .join(" ");
+  }
+
   render() {
     return (
       <Container fluid className="my-3">
         <div className="d-flex">
-          <h2 className="mb-3 me-3">{this.props.query}</h2>
+          <h2 className="mb-3 me-3">{this.capitalizeTitle(this.props.query)}</h2>
           {this.state.isLoading && <Spinner animation="border" variant="light" />}
         </div>
         <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">

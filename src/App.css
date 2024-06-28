@@ -65,3 +65,7 @@ svg:hover {
     z-index: 99;
   }
 }
+
+.form-control {
+  width: 350px !important;
+}

@@ -13,11 +13,11 @@ function App() {
       <MyNavBar />
       <PageHeading />
       <SearchMovie />
-      {/* <Gallery query="The Lord of The Rings" />
+      <Gallery query="The Lord of The Rings" />
       <Gallery query="Star Wars" />
       <Gallery query="Harry Potter" />
       <Gallery query="Godzilla" />
-      <Gallery query="Scary Movie" /> */}
+      <Gallery query="Scary Movie" />
       {/*   <AccountNav /> */}
       <MyFooter />
     </div>

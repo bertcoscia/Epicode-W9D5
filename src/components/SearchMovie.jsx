@@ -30,11 +30,11 @@ class SearchMovie extends Component {
   render() {
     return (
       <Container fluid className="mb-3">
-        <Form className="mt-5" onSubmit={event => this.handleSubmit(event)}>
+        <Form className="mt-5 d-flex" onSubmit={event => this.handleSubmit(event)}>
           <Form.Group className="mb-3">
             <Form.Control type="text" placeholder="Search" onChange={event => this.handleFieldChange(event.target.value)} />
           </Form.Group>
-          <Button type="submit" variant="secondary">
+          <Button type="submit" variant="secondary" className="align-self-start ms-3">
             Search
           </Button>
         </Form>
