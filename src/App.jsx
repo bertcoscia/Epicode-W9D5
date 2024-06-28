@@ -7,7 +7,7 @@ function App() {
   return (
     <div data-bs-theme="dark">
       <MyNavBar />
-      <Gallery></Gallery>
+      <Gallery query="The Lord of The Rings" />
     </div>
   );
 }
