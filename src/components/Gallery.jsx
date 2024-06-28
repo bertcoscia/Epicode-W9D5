@@ -22,7 +22,7 @@ class Gallery extends Component {
       .then(responeJSON => {
         const results = responeJSON.Search;
         this.setState({ results: results });
-        console.log("state", this.state);
+        console.log(this.state.results);
       })
       .finally(() => this.setState({ isLoading: false }))
       .catch(error => console.log(error));
@@ -34,9 +34,9 @@ class Gallery extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container fluid className="my-3">
         <div className="d-flex">
-          <h3 className="mb-3 me-3">{this.props.query}</h3>
+          <h2 className="mb-3 me-3">{this.props.query}</h2>
           {this.state.isLoading && <Spinner animation="border" variant="light" />}
         </div>
         <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">

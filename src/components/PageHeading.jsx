@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Container, Dropdown } from "react-bootstrap";
+import SearchMovie from "./SearchMovie";
 
 class PageHeading extends Component {
   render() {
@@ -22,6 +23,7 @@ class PageHeading extends Component {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+        <SearchMovie />
         <div class="d-flex ms-auto">
           <div className="border border-light-subtle py-1 px-2 me-2 heading-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#707070" className="bi bi-list" viewBox="0 0 16 16">
