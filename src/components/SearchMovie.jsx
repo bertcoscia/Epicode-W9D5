@@ -20,11 +20,15 @@ class SearchMovie extends Component {
     console.log(this.state.title);
     this.setState({ hasSubmitted: true });
 
-    fetch(`${URL + this.state.title + searchParam}`).then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-    });
+    fetch(`${URL + this.state.title + searchParam}`)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Couldn't get data");
+        }
+      })
+      .catch(error => console.log(error));
   };
 
   render() {

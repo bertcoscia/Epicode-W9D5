@@ -22,7 +22,6 @@ class Gallery extends Component {
       .then(data => {
         const results = data.Search;
         this.setState({ results: results });
-        console.log(this.state.results);
       })
       .finally(() => this.setState({ isLoading: false }))
       .catch(error => console.log(error));
@@ -48,11 +47,11 @@ class Gallery extends Component {
           <h2 className="mb-3 me-3">{this.capitalizeTitle(this.props.query)}</h2>
           {this.state.isLoading && <Spinner animation="border" variant="light" />}
         </div>
-        <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">
+        <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto flex-nowrap py-5">
           {this.state.results &&
             this.state.results.map(result => (
               <Col key={result.imdbID} className="item" xs={5}>
-                <img src={result.Poster} alt={result.Title} className="img-fluid" />
+                <img src={result.Poster} alt={result.Title} className="item-img" />
               </Col>
             ))}
         </Row>
