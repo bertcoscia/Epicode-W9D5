@@ -1,12 +1,13 @@
 import { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 
 const URL = "http://www.omdbapi.com/?apikey=71c0d48&s=";
 const type = "&type=movie";
 
 class Gallery extends Component {
   state = {
-    results: null
+    results: null,
+    isLoading: true
   };
 
   fetchMovies(query) {
@@ -22,7 +23,9 @@ class Gallery extends Component {
         const results = responeJSON.Search;
         this.setState({ results: results });
         console.log("state", this.state);
-      });
+      })
+      .finally(() => this.setState({ isLoading: false }))
+      .catch(error => console.log(error));
   }
 
   componentDidMount() {
@@ -32,7 +35,10 @@ class Gallery extends Component {
   render() {
     return (
       <Container fluid>
-        <h3 className="mb-3">{this.props.query}</h3>
+        <div className="d-flex">
+          <h3 className="mb-3 me-3">{this.props.query}</h3>
+          {this.state.isLoading && <Spinner animation="border" variant="light" />}
+        </div>
         <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">
           {this.state.results &&
             this.state.results.map(result => (
