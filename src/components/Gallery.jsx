@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 
 const URL = "http://www.omdbapi.com/?apikey=71c0d48&s=";
-const type = "&type=movie";
+const searchParam = "&type=movie";
 
 class Gallery extends Component {
   state = {
@@ -11,7 +11,7 @@ class Gallery extends Component {
   };
 
   fetchMovies(query) {
-    fetch(`${URL + query + type}`)
+    fetch(`${URL + query + searchParam}`)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -51,7 +51,7 @@ class Gallery extends Component {
         <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">
           {this.state.results &&
             this.state.results.map(result => (
-              <Col key={result.imdbID} className="item">
+              <Col key={result.imdbID} className="item" xs={5}>
                 <img src={result.Poster} alt={result.Title} className="img-fluid" />
               </Col>
             ))}

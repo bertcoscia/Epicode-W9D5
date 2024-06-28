@@ -3,7 +3,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import Gallery from "./Gallery";
 
 const URL = "http://www.omdbapi.com/?apikey=71c0d48&s=";
-const type = "&type=movie&t";
+const searchParam = "&type=movie&t";
 
 class SearchMovie extends Component {
   state = {
@@ -20,7 +20,7 @@ class SearchMovie extends Component {
     console.log(this.state.title);
     this.setState({ hasSubmitted: true });
 
-    fetch(`${URL + this.state.title + type}`).then(response => {
+    fetch(`${URL + this.state.title + searchParam}`).then(response => {
       if (response.ok) {
         return response.json();
       }
