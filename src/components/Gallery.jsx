@@ -37,7 +37,7 @@ class Gallery extends Component {
           {this.state.results &&
             this.state.results.map(result => (
               <Col key={result.imdbID}>
-                <img src={result.Poster} alt={result.Title} className="img-fluid" />
+                <img src={result.Poster} alt={result.Title} className="cover-img" />
               </Col>
             ))}
         </Row>
