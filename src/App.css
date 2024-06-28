@@ -56,3 +56,12 @@ svg:hover {
 .heading-btn {
   border-color: #808080 !important;
 }
+
+.item {
+  cursor: pointer;
+  transition: transform 300ms;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 99;
+  }
+}

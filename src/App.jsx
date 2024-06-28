@@ -10,11 +10,11 @@ function App() {
     <div className="text-white" style={{ backgroundColor: "#141414" }}>
       <MyNavBar />
       <PageHeading />
-      <Gallery query="Godzilla" />
       <Gallery query="The Lord of The Rings" />
-      <Gallery query="Scary Movie" />
+      <Gallery query="Star Wars" />
       <Gallery query="Harry Potter" />
-      <Gallery query="James Bond" />
+      <Gallery query="Godzilla" />
+      <Gallery query="Scary Movie" />
       <MyFooter />
     </div>
   );

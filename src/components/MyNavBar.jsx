@@ -16,20 +16,20 @@ function MyNavBar() {
             <Nav.Link href="#home" className="">
               Home
             </Nav.Link>
-            <Nav.Link href="#link" className="">
+            <Nav.Link href="#Home" className="">
               TV Shows
             </Nav.Link>
-            <Nav.Link href="#link" className="">
+            <Nav.Link href="#Home" className="">
               Movies
             </Nav.Link>
-            <Nav.Link href="#link" className="">
+            <Nav.Link href="#Home" className="">
               Recently Added
             </Nav.Link>
-            <Nav.Link href="#link" className="">
+            <Nav.Link href="#Home" className="">
               My List
             </Nav.Link>
           </Nav>
-          <Nav className="align-text-center">
+          <Nav className="align-items-center">
             <Nav.Link href="#home">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#808080" className="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -45,7 +45,7 @@ function MyNavBar() {
             </Nav.Link>
             <Nav.Link href="#home">
               <Dropdown>
-                <Dropdown.Toggle className="bg-none">
+                <Dropdown.Toggle variant="" className="">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="" width="30px" />
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu dropdown-menu-dark dropdown-menu-end">

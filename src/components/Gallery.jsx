@@ -32,12 +32,12 @@ class Gallery extends Component {
   render() {
     return (
       <Container fluid>
-        <h3>{this.props.query}</h3>
-        <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto flex-nowrap">
+        <h3 className="mb-3">{this.props.query}</h3>
+        <Row className="row-cols-2 row-cols-md-3 row-cols-xl-6 justify-content-start gy-1 gy-md-2 gx-1 gx-md-2 overflow-x-auto overflow-y-hidden flex-nowrap">
           {this.state.results &&
             this.state.results.map(result => (
-              <Col key={result.imdbID}>
-                <img src={result.Poster} alt={result.Title} className="cover-img" />
+              <Col key={result.imdbID} className="item">
+                <img src={result.Poster} alt={result.Title} className="img-fluid" />
               </Col>
             ))}
         </Row>
