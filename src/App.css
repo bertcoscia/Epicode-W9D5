@@ -69,3 +69,21 @@ svg:hover {
 .form-control {
   width: 350px !important;
 }
+
+.general-btn {
+  border-radius: unset;
+  opacity: 60%;
+  color: #808080;
+  &:hover {
+    color: #ffffff !important;
+    opacity: 100%;
+  }
+}
+
+.general-btn-danger {
+  opacity: 60%;
+  border-radius: unset;
+  &:hover {
+    opacity: 100%;
+  }
+}

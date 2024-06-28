@@ -19,8 +19,8 @@ class Gallery extends Component {
           throw new Error("Couldn't get data");
         }
       })
-      .then(responeJSON => {
-        const results = responeJSON.Search;
+      .then(data => {
+        const results = data.Search;
         this.setState({ results: results });
         console.log(this.state.results);
       })
