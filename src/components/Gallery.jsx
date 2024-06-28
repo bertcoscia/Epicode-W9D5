@@ -23,8 +23,8 @@ class Gallery extends Component {
         const results = data.Search;
         this.setState({ results: results });
       })
-      .finally(() => this.setState({ isLoading: false }))
-      .catch(error => console.log(error));
+      .catch(error => console.log(error))
+      .finally(() => this.setState({ isLoading: false }));
   }
 
   componentDidMount() {
